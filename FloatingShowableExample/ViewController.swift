@@ -14,21 +14,9 @@ final class ViewController: UIViewController {
         floatingScreen.dismiss(isScaleChange: true)
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        floatingScreen.view.addGestureRecognizer(
-            UIPanGestureRecognizer(target: self, action: #selector(gestureAction(sender:)))
-        )
-    }
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         floatingScreen.show()
-    }
-
-    @objc func gestureAction(sender: UIPanGestureRecognizer) {
-        floatingScreen.onTransition(gesture: sender)
     }
 }

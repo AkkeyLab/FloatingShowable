@@ -19,6 +19,7 @@
 		E53ECC29256FB3FA00580D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53ECC27256FB3FA00580D6C /* Main.storyboard */; };
 		E53ECC2B256FB3FC00580D6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53ECC2A256FB3FC00580D6C /* Assets.xcassets */; };
 		E53ECC2E256FB3FC00580D6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53ECC2C256FB3FC00580D6C /* LaunchScreen.storyboard */; };
+		E5CA811225790BFF0077043A /* GestureClosureSleeve.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CA811125790BFF0077043A /* GestureClosureSleeve.swift */; };
 		E5E856102571080A000C5F15 /* FloatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E8560F2571080A000C5F15 /* FloatingViewController.swift */; };
 		E5E8561525710961000C5F15 /* FloatingShowable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E53ECBED256F909D00580D6C /* FloatingShowable.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		E53ECC2A256FB3FC00580D6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E53ECC2D256FB3FC00580D6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E53ECC2F256FB3FC00580D6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5CA811125790BFF0077043A /* GestureClosureSleeve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureClosureSleeve.swift; sourceTree = "<group>"; };
 		E5E8560F2571080A000C5F15 /* FloatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 				E53ECC0D256F93E100580D6C /* Extensions */,
 				E53ECC0E256F941700580D6C /* FloatingShowable.swift */,
 				E53ECC12256F943300580D6C /* FloatingPosition.swift */,
+				E5CA811125790BFF0077043A /* GestureClosureSleeve.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53ECC13256F943300580D6C /* FloatingPosition.swift in Sources */,
+				E5CA811225790BFF0077043A /* GestureClosureSleeve.swift in Sources */,
 				E53ECC0F256F941700580D6C /* FloatingShowable.swift in Sources */,
 				E53ECC17256FA50C00580D6C /* UIViewController+.swift in Sources */,
 			);

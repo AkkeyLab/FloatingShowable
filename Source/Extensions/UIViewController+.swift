@@ -54,6 +54,8 @@ public extension FloatingShowable {
 }
 
 public extension FloatingShowable where Self: UIViewController {
+    /// Show processing is performed.
+    /// If the call is made more than once, please hide it in advance.
     func show() {
         view.layer.shadowColor = shadowColor
         view.layer.shadowOpacity = shadowOpacity
@@ -71,6 +73,15 @@ public extension FloatingShowable where Self: UIViewController {
         updateFrame(position: position)
         window.addSubview(view)
 
+        let sleeve = GestureClosureSleeve<UIPanGestureRecognizer>({ [weak self] gesture in
+            self?.onTransition(gesture: gesture)
+        })
+        let recognizer = UIPanGestureRecognizer(target: sleeve, action: #selector(GestureClosureSleeve.invoke(_:)))
+        recognizer.name = "com.akkeylab.lib.FloatingShowable"
+        view.addGestureRecognizer(recognizer)
+        let key = String(format: "[%d]", arc4random())
+        objc_setAssociatedObject(self, key, sleeve, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+
         UIView.animate(
             withDuration: transitionAnimationWithDuration,
             delay: .zero,
@@ -81,6 +92,7 @@ public extension FloatingShowable where Self: UIViewController {
         )
     }
 
+    /// If you change the stayArea and call it, the changes will be applied with animation.
     func updateLayout() {
         view.layer.removeAllAnimations()
         UIView.animate(
@@ -95,7 +107,14 @@ public extension FloatingShowable where Self: UIViewController {
         )
     }
 
+    /// Hide processing is performed.
+    /// - Parameters:
+    ///   - isScaleChange: You can specify whether to perform scale animation when hiding.
     func dismiss(isScaleChange: Bool) {
+        view.gestureRecognizers?
+            .filter { $0.name == "com.akkeylab.lib.FloatingShowable" }
+            .forEach { view.removeGestureRecognizer($0) }
+
         UIView.animate(
             withDuration: transitionAnimationWithDuration,
             delay: .zero,
@@ -115,7 +134,7 @@ public extension FloatingShowable where Self: UIViewController {
         )
     }
 
-    mutating func onTransition(gesture: UIPanGestureRecognizer) {
+    private mutating func onTransition(gesture: UIPanGestureRecognizer) {
         switch gesture.state {
         case .changed:
             let center = self.view.center

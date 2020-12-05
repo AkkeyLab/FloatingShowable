@@ -5,8 +5,8 @@ This is a support kit that helps you develop a picture-in-picture-like view.
 ![ios](https://cocoapod-badges.herokuapp.com/p/FloatingShowable/badge.png)
 ![MIT](https://cocoapod-badges.herokuapp.com/l/FloatingShowable/badge.png)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Build Status](https://travis-ci.com/AkkeyLab/FloatingShowable.svg?branch=master)](https://travis-ci.com/AkkeyLab/FloatingShowable)
-[![codecov](https://codecov.io/gh/AkkeyLab/FloatingShowable/branch/master/graph/badge.svg)](https://codecov.io/gh/AkkeyLab/FloatingShowable)
+[![Build Status](https://travis-ci.com/AkkeyLab/FloatingShowable.svg?branch=main)](https://travis-ci.com/AkkeyLab/FloatingShowable)
+[![codecov](https://codecov.io/gh/AkkeyLab/FloatingShowable/branch/main/graph/badge.svg)](https://codecov.io/gh/AkkeyLab/FloatingShowable)
 
 # Introduction
 `FloatingShowable` is a UIKit library for a more concise picture-in-picture implementation. Acceleration control, which tends to be complicated, is also supported.

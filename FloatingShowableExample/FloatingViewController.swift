@@ -10,6 +10,7 @@ import UIKit
 
 final class FloatingViewController: UIViewController {
     var position: FloatingPosition = .bottomRight
+    var stayArea: UIEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 16, right: 8)
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -15,7 +15,7 @@ script:
     - swiftlint
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash) -t 32f86711-302e-4fa6-bf17-d5cf3efc60c1
+    - bash <(curl -s https://codecov.io/bash) -t 61bc1a62-8dfe-4491-a8b1-39025a1d8310
 
 # https://docs.travis-ci.com/user/reference/osx/#xcode-version
 # https://docs.travis-ci.com/user/languages/objective-c/
